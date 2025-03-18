@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen">
+    <div class="max-w-md w-full text-center">
+        <!-- Greeting Section -->
+        <div id="greeting-section" class="p-6 bg-gray-800 rounded-lg shadow-lg">
+            <h1 class="text-4xl font-extrabold text-blue-400 mb-4">Welcome to the Quiz Game!</h1>
+            <p class="text-lg text-gray-300 mb-6">Are you ready to test your knowledge?</p>
+            <!-- Quiz Game Card -->
+            <div class="p-6 bg-gray-700 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-gray-100 mb-4">Take the Challenge!</h2>
+                <p class="text-gray-400 mb-6">Click the button below to start the quiz and see how well you do.</p>
+                <button
+                    id="start-quiz-button"
+                    class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                    Start Quiz
+                </button>
+            </div>
+        </div>
+
+        <div id="quiz-container" class="hidden mt-6 p-6 bg-gray-800 rounded-lg shadow-lg">
+            <h1 id="question-title" class="text-2xl font-semibold text-gray-100 mb-4">Question Title</h1>
+            <ul id="options-list" class="space-y-3">
+                <li
+                    class="bg-gray-700 hover:bg-gray-600 text-gray-100 py-2 px-4 rounded cursor-pointer transition duration-300">
+                    Option 1
+                </li>
+                <li
+                    class="bg-gray-700 hover:bg-gray-600 text-gray-100 py-2 px-4 rounded cursor-pointer transition duration-300">
+                    Option 2
+                </li>
+                <li
+                    class="bg-gray-700 hover:bg-gray-600 text-gray-100 py-2 px-4 rounded cursor-pointer transition duration-300">
+                    Option 3
+                </li>
+                <li
+                    class="bg-gray-700 hover:bg-gray-600 text-gray-100 py-2 px-4 rounded cursor-pointer transition duration-300">
+                    Option 4
+                </li>
+            </ul>
+            <button id="next-question-button"
+                class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition duration-300 hidden">
+                Next Question
+            </button>
+            <button id="submit-quiz-button"
+                class="mt-4 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition duration-300 hidden">
+                Submit Quiz
+            </button>
+        </div>
+        <div id="result-section" class="hidden p-6 bg-gray-800 text-gray-100 rounded-lg shadow-lg mt-6">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">Quiz Results</h2>
+            <div class="mb-4">
+                <p class="text-lg"><span class="font-semibold">Score:</span> <span id="score">0</span></p>
+                <p class="text-lg"><span class="font-semibold">Correct Answers:</span> <span id="correct-count">0</span></p>
+                <p class="text-lg"><span class="font-semibold">Wrong Answers:</span> <span id="wrong-count">0</span></p>
+                <button id="show-answers-button" class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300">Show Answers</button>
+            </div>
+            <div id="answers-section" class="bg-gray-700 p-4 rounded hidden">
+                <h3 class="text-xl font-semibold mb-3">Your Answers</h3>
+                <ul id="answers-list" class="space-y-2">
+                    <!-- Individual answers will be populated here -->
+                </ul>
+            </div>
+            <button
+                class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300"
+                id="restart-quiz-button"
+>
+                Restart Quiz
+            </button>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
