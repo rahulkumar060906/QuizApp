@@ -98,7 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function displayQuestion(currentQuestionIndex) {
-
+        nextQuestionButton.classList.add("hidden");
+        submitButton.classList.add("hidden");
         let question = questions[currentQuestionIndex]
         questionTitle.textContent = question.question
         optionList.innerHTML = ""
